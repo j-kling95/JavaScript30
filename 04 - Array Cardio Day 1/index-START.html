@@ -171,20 +171,20 @@
             console.log(unqiueData);
 
             let instances = unqiueData.reduce((sum, dataEntry) => {
-                let occurences = data.filter(element => element === dataEntry).length;
-                console.log(occurences)
+                let occurences = data.filter(
+                    (element) => element === dataEntry,
+                ).length;
+                console.log(occurences);
                 return sum + occurences;
             }, 0);
 
             console.log(instances);
 
             const transportation = data.reduce((obj, item) => {
-                if (obj[item])
-                    obj[item] += 1;
-                else
-                    obj[item] = 1;
+                if (obj[item]) obj[item] += 1;
+                else obj[item] = 1;
                 return obj;
-            }, {})
+            }, {});
 
             console.log(transportation);
         </script>
